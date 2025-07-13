@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CodeXFrame – Prosjektoversikt</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="light-theme">
+
+  <nav style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem;">
+    <div style="display: flex; align-items: center; gap: 0.5rem;">
+      <img src="codexframe-logo.webp" alt="CodeXFrame logo" style="height: 36px;" />
+      <strong style="font-size: 1.1rem;">CodeXFrame</strong>
+    </div>
+    <div class="theme-switcher" style="display: flex; gap: 0.5rem;">
+      <button onclick="setTheme('light')">☀️ Sølvgrå</button>
+      <button onclick="setTheme('sky')">🌤️ Himmelblå</button>
+      <button onclick="setTheme('dark')">🌙 Mørk m/gul</button>
+    </div>
+  </nav>
+
+  <h1>🚀 CodeXFrame – Prosjektoversikt</h1>
+
+  <h2>✅ Ferdige / Pågående prosjekter</h2>
+  <div id="ferdig-container"></div>
+
+  <h2>🔨 Påbegynte prosjekter</h2>
+  <div id="pabegynt-container"></div>
+
+  <h2>💡 Prosjekter jeg kan begynne på</h2>
+  <div id="ide-container"></div>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const root = document.documentElement;
+      const current = document.body.className || 'light-theme';
+      root.classList.add(current);
+    });
+
+    function setTheme(theme) {
+      document.documentElement.className = '';
+      document.body.className = theme + '-theme';
+    }
+  </script>
+
+</body>
+
+</html>
