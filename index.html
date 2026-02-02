@@ -5,48 +5,45 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CodeXFrame – Prosjektoversikt</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body class="light-theme">
+<body>
 
-  <nav style="display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1rem;">
-    <div style="display: flex; align-items: center; gap: 0.5rem;">
-      <img src="codexframe-logo.webp" alt="CodeXFrame logo" style="height: 36px;" />
-      <strong style="font-size: 1.1rem;">CodeXFrame</strong>
+  <nav class="top-nav">
+    <div class="nav-brand">
+      <svg class="brand-logo" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-label="CodeXFrame logo">
+        <rect width="36" height="36" rx="6" fill="#2196f3"/>
+        <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+              font-family="Quicksand, sans-serif" font-weight="700" font-size="18" fill="#fff">CX</text>
+      </svg>
+      <strong class="brand-name">CodeXFrame</strong>
     </div>
-    <div class="theme-switcher" style="display: flex; gap: 0.5rem;">
-      <button onclick="setTheme('light')">☀️ Sølvgrå</button>
-      <button onclick="setTheme('sky')">🌤️ Himmelblå</button>
-      <button onclick="setTheme('dark')">🌙 Mørk m/gul</button>
+    <div class="theme-switcher">
+      <button data-theme="light">Solvgra</button>
+      <button data-theme="sky">Himmelbla</button>
+      <button data-theme="dark">Mork</button>
     </div>
   </nav>
 
-  <h1>🚀 CodeXFrame – Prosjektoversikt</h1>
+  <h1>CodeXFrame – Prosjektoversikt</h1>
 
-  <h2>✅ Ferdige / Pågående prosjekter</h2>
+  <h2>Ferdige prosjekter</h2>
   <div id="ferdig-container"></div>
 
-  <h2>🔨 Påbegynte prosjekter</h2>
+  <h2>Pabegynte prosjekter</h2>
   <div id="pabegynt-container"></div>
 
-  <h2>💡 Prosjekter jeg kan begynne på</h2>
+  <h2>Ideer</h2>
   <div id="ide-container"></div>
 
-  <script src="script.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const root = document.documentElement;
-      const current = document.body.className || 'light-theme';
-      root.classList.add(current);
-    });
+  <div id="error-box" class="error-box" hidden>
+    <strong>Kunne ikke laste prosjekter.</strong>
+    <p>Sjekk at <code>data/projects.json</code> finnes og er gyldig JSON.</p>
+  </div>
 
-    function setTheme(theme) {
-      document.documentElement.className = '';
-      document.body.className = theme + '-theme';
-    }
-  </script>
+  <script src="script.js"></script>
 
 </body>
 

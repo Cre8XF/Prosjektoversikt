@@ -1,10 +1,57 @@
+/* === Base === */
 body {
   font-family: 'Quicksand', sans-serif;
   padding: 2rem;
   background-color: #f9f9f9;
-  transition: background-color 0.3s;
+  color: #222;
+  transition: background-color 0.3s, color 0.3s;
 }
 
+/* === Nav (W10: moved from inline styles) === */
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  flex-wrap: wrap;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.brand-logo {
+  height: 36px;
+  width: 36px;
+}
+
+.brand-name {
+  font-size: 1.1rem;
+}
+
+.theme-switcher {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.theme-switcher button {
+  font-family: inherit;
+  cursor: pointer;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+}
+
+.theme-switcher button:hover {
+  opacity: 0.8;
+}
+
+/* === Light theme (default) === */
 .light-theme {
   background-color: #bea4a4;
   color: #222;
@@ -15,10 +62,19 @@ body {
   border-left-color: #666;
 }
 
+.light-theme .project:hover {
+  background-color: #a89999;
+}
+
 .light-theme a {
   color: #007acc;
 }
 
+.light-theme .theme-switcher button {
+  border-color: #999;
+}
+
+/* === Sky theme === */
 .sky-theme {
   background-color: #507fa1;
   color: #1a1a1a;
@@ -29,9 +85,19 @@ body {
   border-left-color: #2196f3;
 }
 
+.sky-theme .project:hover {
+  background-color: #e3f2fd;
+}
+
 .sky-theme a {
   color: #1565c0;
 }
+
+.sky-theme .theme-switcher button {
+  border-color: #79a8c8;
+}
+
+/* === Dark theme === */
 .dark-theme {
   background-color: #121212;
   color: #d0d0d0;
@@ -42,10 +108,19 @@ body {
   border-left-color: #00bcd4;
 }
 
+.dark-theme .project:hover {
+  background-color: #2a2a2a;
+}
+
 .dark-theme a {
   color: #4dd0e1;
 }
 
+.dark-theme .theme-switcher button {
+  border-color: #555;
+}
+
+/* === Typography === */
 h1 {
   text-align: center;
   margin-bottom: 3rem;
@@ -56,17 +131,14 @@ h2 {
   margin-bottom: 1rem;
 }
 
+/* === Project cards === */
 .project {
   background: white;
   margin-bottom: 1.2rem;
   border-left: 5px solid #2196f3;
   padding: 1rem 1.5rem;
   cursor: pointer;
-  transition: background 0.2s ease;
-}
-
-.project:hover {
-  background: #f0f8ff;
+  transition: background-color 0.2s ease;
 }
 
 .project h2 {
@@ -89,7 +161,29 @@ h2 {
   margin-top: 0.5rem;
 }
 
+.dark-theme .meta {
+  color: #999;
+}
+
 a {
   color: #2196f3;
   text-decoration: none;
+}
+
+/* === Error box (A6) === */
+.error-box {
+  margin: 3rem auto;
+  max-width: 500px;
+  padding: 1.5rem;
+  border: 2px solid #e53935;
+  border-radius: 6px;
+  background: #ffebee;
+  color: #b71c1c;
+  text-align: center;
+}
+
+.error-box code {
+  background: #ffcdd2;
+  padding: 0.1rem 0.4rem;
+  border-radius: 3px;
 }
