@@ -2,9 +2,8 @@
 (function () {
   var STATUSES = [
     { value: "not_started", label: "Not started" },
-    { value: "auditing", label: "Auditing" },
-    { value: "fixing", label: "Fixing" },
     { value: "active", label: "Active" },
+    { value: "fixing", label: "Fixing" },
     { value: "frozen", label: "Frozen" },
     { value: "archived", label: "Archived" }
   ];
@@ -37,6 +36,26 @@
     return el("span", "status-badge " + status, label);
   }
 
+  function statusDropdown(id, currentStatus) {
+    var select = document.createElement("select");
+    select.className = "status-select";
+    STATUSES.forEach(function (s) {
+      var opt = document.createElement("option");
+      opt.value = s.value;
+      opt.textContent = s.label;
+      if (currentStatus === s.value) opt.selected = true;
+      select.appendChild(opt);
+    });
+    select.addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+    select.addEventListener("change", function (e) {
+      e.stopPropagation();
+      doAction(id, { status: select.value, lastReviewed: today() });
+    });
+    return select;
+  }
+
   function priorityDot(priority) {
     if (!priority) return document.createTextNode("");
     return el("span", "priority-dot " + priority);
@@ -45,7 +64,6 @@
   function needsAction(p) {
     return p.nextAction ||
       p.status === "not_started" ||
-      p.status === "auditing" ||
       p.status === "fixing";
   }
 
@@ -115,7 +133,7 @@
     titleRow.appendChild(title);
 
     var meta = el("span", "card-meta");
-    meta.appendChild(statusBadge(p.status));
+    meta.appendChild(statusDropdown(p.id, p.status));
     meta.appendChild(priorityDot(p.priority));
     if (needsAction(p)) {
       meta.appendChild(el("span", "needs-action-dot"));
@@ -292,7 +310,7 @@
       statusSelect.appendChild(opt);
     });
     statusSelect.addEventListener("change", function () {
-      doAction(p.id, { status: statusSelect.value });
+      doAction(p.id, { status: statusSelect.value, lastReviewed: today() });
     });
     row.appendChild(statusSelect);
 

@@ -61,7 +61,6 @@
       result = result.filter(function (p) {
         return p.nextAction ||
           p.status === "not_started" ||
-          p.status === "auditing" ||
           p.status === "fixing";
       });
     }
