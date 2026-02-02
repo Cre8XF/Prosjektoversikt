@@ -3,255 +3,255 @@
     "id": "butikkoversikt",
     "title": "Butikkoversikt.no",
     "category": "ferdig",
-    "description": "En oversikt over norske nettbutikker, med filtre, kategorier og dynamisk innhold.",
-    "status": "Live og vedlikeholdes",
-    "todo": "Løpende oppdatering av butikker, forbedringer og SEO",
-    "tech": "HTML, CSS, JavaScript, JSON",
-    "links": {
-      "github": null,
-      "demo": "https://butikkoversikt.no",
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 4,
+    "status": "active",
+    "repoUrl": null,
+    "liveUrl": "https://butikkoversikt.no",
+    "lastReviewed": null,
+    "nextAction": "",
+    "notes": "Løpende oppdatering av butikker, forbedringer og SEO",
+    "tech": ["HTML", "CSS", "JavaScript", "JSON"],
+    "tags": ["web", "directory", "public"],
+    "priority": "medium"
   },
   {
     "id": "innkjopsteam-side",
     "title": "Innkjøpsteam-side",
     "category": "ferdig",
-    "description": "En dynamisk oversikt over personer, roller og kategorier i innkjøpsorganisasjonen.",
-    "status": "Lansert, justeres fortløpende",
-    "todo": "Utvidelse med filtrering, kontakter og visuell forbedring",
-    "tech": "HTML, CSS, JavaScript, JSON",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 4,
+    "status": "active",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Utvidelse med filtrering og kontakter",
+    "notes": "En dynamisk oversikt over personer, roller og kategorier i innkjøpsorganisasjonen.",
+    "tech": ["HTML", "CSS", "JavaScript", "JSON"],
+    "tags": ["web", "internal"],
+    "priority": "low"
   },
   {
     "id": "cre8bot",
     "title": "CRE8BOT (ChatGPT-app)",
     "category": "ferdig",
-    "description": "En personlig AI-chatapp bygget med støtte for OpenAI, med egen stil og struktur.",
-    "status": "Fungerende prototype",
-    "todo": "Støtte for flere modeller, lagring av samtaler",
-    "tech": "HTML, CSS, JavaScript, OpenAI API",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 3,
+    "status": "active",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Støtte for flere modeller, lagring av samtaler",
+    "notes": "En personlig AI-chatapp bygget med støtte for OpenAI, med egen stil og struktur.",
+    "tech": ["HTML", "CSS", "JavaScript", "OpenAI API"],
+    "tags": ["ai", "tool"],
+    "priority": "medium"
   },
   {
     "id": "verktoykasse-cre8xf",
     "title": "Verktøykasse på cre8xf.dev",
     "category": "ferdig",
-    "description": "En samleside med nyttige AI-verktøy og lenker.",
-    "status": "Lansert, i utvikling",
-    "todo": "Legge til nye verktøy og forbedre oversikt",
-    "tech": "HTML, CSS, JavaScript",
-    "links": {
-      "github": null,
-      "demo": "https://cre8xf.dev",
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 4,
+    "status": "active",
+    "repoUrl": null,
+    "liveUrl": "https://cre8xf.dev",
+    "lastReviewed": null,
+    "nextAction": "Legge til nye verktøy og forbedre oversikt",
+    "notes": "En samleside med nyttige AI-verktøy og lenker.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["web", "ai", "public"],
+    "priority": "low"
   },
   {
     "id": "familie-kalender",
     "title": "Familie-kalender",
     "category": "påbegynt",
-    "description": "En interaktiv ukeplan med modalvisning for hendelser.",
-    "status": "Grunnstruktur klar",
-    "todo": "Legge til hendelser, koble til lagring, forbedre design",
-    "tech": "HTML, CSS, JavaScript",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 2,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Legge til hendelser, koble til lagring, forbedre design",
+    "notes": "En interaktiv ukeplan med modalvisning for hendelser.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["web", "family"],
+    "priority": "medium"
   },
   {
     "id": "volum-enhetskalkulator",
     "title": "Volum- og enhetskalkulator",
     "category": "påbegynt",
-    "description": "Konverteringsverktøy for kjøkken, bygg og daglig bruk.",
-    "status": "Delvis ferdig",
-    "todo": "Utvidelse av kategorier og forbedret UI",
-    "tech": "HTML, CSS, JavaScript",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 2,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Utvidelse av kategorier og forbedret UI",
+    "notes": "Konverteringsverktøy for kjøkken, bygg og daglig bruk.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["web", "tool"],
+    "priority": "low"
   },
   {
     "id": "streaming-dashboard",
     "title": "Streaming-dashboard",
     "category": "påbegynt",
-    "description": "Samler info og oversikt over strømmetjenester og utvalg.",
-    "status": "Grunnarbeid gjort",
-    "todo": "Legge til API-støtte og oppdatere innhold",
-    "tech": "HTML, CSS, JavaScript",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 2,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Legge til API-støtte og oppdatere innhold",
+    "notes": "Samler info og oversikt over strømmetjenester og utvalg.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["web", "media"],
+    "priority": "low"
   },
   {
     "id": "lights-out-spill",
     "title": "Lights Out-spill",
     "category": "påbegynt",
-    "description": "Et klassisk brettspill hvor målet er å slukke alle lysene.",
-    "status": "Spillmekanikk implementert",
-    "todo": "Nivåer, score, design",
-    "tech": "HTML, CSS, JavaScript",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 2,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Nivåer, score, design",
+    "notes": "Et klassisk brettspill hvor målet er å slukke alle lysene.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["game"],
+    "priority": "low"
   },
   {
     "id": "mario-plattformspill",
     "title": "Mario-lignende plattformspill",
     "category": "påbegynt",
-    "description": "Et retro plattformspill inspirert av Super Mario.",
-    "status": "Testet kollisjoner og bevegelse",
-    "todo": "Nivåbygging, lyder, fiender, poengsystem",
-    "tech": "HTML, CSS, JavaScript",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 2,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Nivåbygging, lyder, fiender, poengsystem",
+    "notes": "Et retro plattformspill inspirert av Super Mario.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["game"],
+    "priority": "low"
   },
   {
     "id": "falcon-spill",
     "title": "Falcon-spill",
     "category": "påbegynt",
-    "description": "Inspirert av futuristiske racingspill som F-Zero.",
-    "status": "Tidlig prototype",
-    "todo": "Fysikk, UI, score, nivåer",
-    "tech": "HTML, CSS, JavaScript / Canvas",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 1,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Fysikk, UI, score, nivåer",
+    "notes": "Inspirert av futuristiske racingspill som F-Zero.",
+    "tech": ["HTML", "CSS", "JavaScript", "Canvas"],
+    "tags": ["game"],
+    "priority": "low"
   },
   {
     "id": "hvor-ble-pengene-av",
     "title": "Hvor ble pengene av?",
     "category": "ide",
-    "description": "Budsjett- og forbruksoversikt med CSV-import og AI-kategorisering.",
-    "status": "Planlagt",
-    "todo": "Oppsett, parsing, visualisering",
-    "tech": "HTML, CSS, JS, evt. GPT API",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 1,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Oppsett, parsing, visualisering",
+    "notes": "Budsjett- og forbruksoversikt med CSV-import og AI-kategorisering.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["web", "tool", "ai"],
+    "priority": "medium"
   },
   {
     "id": "kvitteringssamler",
     "title": "Kvitteringssamler",
     "category": "ide",
-    "description": "Samle og tagge kvitteringer med bilde, beløp og kategori.",
-    "status": "Idé",
-    "todo": "Kamera, lagring, PDF-eksport",
-    "tech": "HTML, JS, evt. Capacitor",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 1,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Kamera, lagring, PDF-eksport",
+    "notes": "Samle og tagge kvitteringer med bilde, beløp og kategori.",
+    "tech": ["HTML", "JavaScript"],
+    "tags": ["web", "tool"],
+    "priority": "low"
   },
   {
     "id": "flytteplanlegger",
     "title": "Flytteplanlegger",
     "category": "ide",
-    "description": "Rom-for-rom plan og pakkeliste, med adresseendring og sjekklister.",
-    "status": "Idé",
-    "todo": "Sjekkliste, lagring og fremdrift",
-    "tech": "HTML, JS",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 1,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Sjekkliste, lagring og fremdrift",
+    "notes": "Rom-for-rom plan og pakkeliste, med adresseendring og sjekklister.",
+    "tech": ["HTML", "JavaScript"],
+    "tags": ["web", "tool"],
+    "priority": "low"
   },
   {
     "id": "matplanlegger",
     "title": "Matplanlegger",
     "category": "ide",
-    "description": "Lag ukemeny og automatisk handleliste. Filter for allergier, tid og budsjett.",
-    "status": "Idé",
-    "todo": "Planvisning, filter og localStorage",
-    "tech": "HTML, CSS, JS",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 1,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Planvisning, filter og localStorage",
+    "notes": "Lag ukemeny og automatisk handleliste. Filter for allergier, tid og budsjett.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["web", "family"],
+    "priority": "low"
   },
   {
     "id": "ai-vs-you",
     "title": "AI vs You-spill",
     "category": "ide",
-    "description": "Gjett om svar, bilde eller sitat kommer fra AI eller menneske.",
-    "status": "Konsept",
-    "todo": "Innhold, visning, poeng og deling",
-    "tech": "HTML, JS, evt. GPT + DALL·E",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 1,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Innhold, visning, poeng og deling",
+    "notes": "Gjett om svar, bilde eller sitat kommer fra AI eller menneske.",
+    "tech": ["HTML", "JavaScript"],
+    "tags": ["game", "ai"],
+    "priority": "low"
   },
   {
     "id": "husprosjekt-app",
     "title": "Husprosjekt-app",
     "category": "ide",
-    "description": "Planlegger for oppussing, materialvalg og fremdrift hjemme.",
-    "status": "Idé",
-    "todo": "Handleliste, milepæler, PDF-eksport",
-    "tech": "HTML, CSS, JS",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 1,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Handleliste, milepæler, PDF-eksport",
+    "notes": "Planlegger for oppussing, materialvalg og fremdrift hjemme.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["web", "tool"],
+    "priority": "low"
   },
   {
     "id": "elbillading-info",
     "title": "Elbillading.info-side",
     "category": "ide",
-    "description": "Infoside med ladestandarder, kabler, støtteordninger og kalkulatorer.",
-    "status": "Idé",
-    "todo": "Skriveinnhold og lage verktøy",
-    "tech": "HTML, CSS, JS",
-    "links": {
-      "github": null,
-      "demo": null,
-      "roadmap": null
-    },
-    "lastUpdated": "2025-07-12"
+    "phase": 1,
+    "status": "not_started",
+    "repoUrl": null,
+    "liveUrl": null,
+    "lastReviewed": null,
+    "nextAction": "Skriveinnhold og lage verktøy",
+    "notes": "Infoside med ladestandarder, kabler, støtteordninger og kalkulatorer.",
+    "tech": ["HTML", "CSS", "JavaScript"],
+    "tags": ["web", "info"],
+    "priority": "low"
   }
 ]

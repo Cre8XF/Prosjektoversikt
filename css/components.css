@@ -1,0 +1,74 @@
+/* === Theme switcher buttons === */
+.theme-switcher {
+  display: flex;
+  gap: 0.25rem;
+}
+
+.theme-switcher button {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8rem;
+}
+
+.theme-switcher button:hover {
+  opacity: 0.7;
+}
+
+/* === View toggle buttons === */
+.view-toggle .btn.active {
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+/* === Card link row === */
+.card-links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+}
+
+.card-links a:hover {
+  text-decoration: underline;
+}
+
+/* === Tag list === */
+.tag-list {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+/* === Needs-action indicator === */
+.needs-action-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #e53935;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+/* === Table inline select === */
+.table-row select {
+  border-radius: 3px;
+  border: 1px solid rgba(128,128,128,0.3);
+  background: transparent;
+  color: inherit;
+}
+
+/* === File input (hidden) === */
+.hidden-input {
+  display: none;
+}
+
+/* === Scroll to top === */
+.sort-arrow {
+  font-size: 0.65rem;
+  margin-left: 0.15rem;
+}

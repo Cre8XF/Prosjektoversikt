@@ -1,50 +1,106 @@
 <!DOCTYPE html>
 <html lang="no">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CodeXFrame – Prosjektoversikt</title>
-  <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <title>CodeXFrame – Project Control Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/themes.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
 </head>
-
 <body>
+  <div class="app">
 
-  <nav class="top-nav">
-    <div class="nav-brand">
-      <svg class="brand-logo" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" aria-label="CodeXFrame logo">
-        <rect width="36" height="36" rx="6" fill="#2196f3"/>
-        <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
-              font-family="Quicksand, sans-serif" font-weight="700" font-size="18" fill="#fff">CX</text>
-      </svg>
-      <strong class="brand-name">CodeXFrame</strong>
+    <!-- Nav -->
+    <nav class="top-nav">
+      <div class="nav-brand">
+        <svg class="brand-logo" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" aria-label="CodeXFrame logo">
+          <rect width="32" height="32" rx="6" fill="#2196f3"/>
+          <text x="50%" y="54%" dominant-baseline="middle" text-anchor="middle"
+                font-family="Quicksand, sans-serif" font-weight="700" font-size="15" fill="#fff">CX</text>
+        </svg>
+        <strong class="brand-name">CodeXFrame</strong>
+      </div>
+      <div class="nav-actions">
+        <div class="view-toggle">
+          <button class="btn active" data-view="dashboard">Dashboard</button>
+          <button class="btn" data-view="table">Table</button>
+        </div>
+        <div class="theme-switcher">
+          <button data-theme="light">Light</button>
+          <button data-theme="sky">Sky</button>
+          <button data-theme="dark">Dark</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Toolbar -->
+    <div class="toolbar">
+      <input type="text" id="filter-search" placeholder="Search projects..." />
+      <select id="filter-phase">
+        <option value="">All phases</option>
+        <option value="1">Phase 1</option>
+        <option value="2">Phase 2</option>
+        <option value="3">Phase 3</option>
+        <option value="4">Phase 4</option>
+      </select>
+      <select id="filter-status">
+        <option value="">All statuses</option>
+        <option value="not_started">Not started</option>
+        <option value="auditing">Auditing</option>
+        <option value="fixing">Fixing</option>
+        <option value="active">Active</option>
+        <option value="frozen">Frozen</option>
+        <option value="archived">Archived</option>
+      </select>
+      <select id="filter-category">
+        <option value="">All categories</option>
+        <option value="ferdig">Ferdig</option>
+        <option value="påbegynt">Påbegynt</option>
+        <option value="ide">Ide</option>
+      </select>
+      <select id="filter-priority">
+        <option value="">All priorities</option>
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <label>
+        <input type="checkbox" id="filter-needs-action" />
+        Needs action
+      </label>
     </div>
-    <div class="theme-switcher">
-      <button data-theme="light">Solvgra</button>
-      <button data-theme="sky">Himmelbla</button>
-      <button data-theme="dark">Mork</button>
+
+    <!-- Summary -->
+    <div id="summary-strip" class="summary-strip"></div>
+
+    <!-- Main content (dashboard or table rendered here) -->
+    <div id="main-content"></div>
+
+    <!-- Error (shown if fetch fails) -->
+    <div id="error-box" class="error-box" hidden>
+      <strong>Could not load projects.</strong>
+      <p>Check that <code>data/projects.json</code> exists and is valid JSON.</p>
     </div>
-  </nav>
 
-  <h1>CodeXFrame – Prosjektoversikt</h1>
+    <!-- Data bar -->
+    <div class="data-bar">
+      <button class="btn" id="btn-export">Export JSON</button>
+      <button class="btn" id="btn-import">Import JSON</button>
+      <input type="file" id="import-file" accept=".json" class="hidden-input" />
+      <button class="btn" id="btn-reset">Reset overrides</button>
+    </div>
 
-  <h2>Ferdige prosjekter</h2>
-  <div id="ferdig-container"></div>
-
-  <h2>Pabegynte prosjekter</h2>
-  <div id="pabegynt-container"></div>
-
-  <h2>Ideer</h2>
-  <div id="ide-container"></div>
-
-  <div id="error-box" class="error-box" hidden>
-    <strong>Kunne ikke laste prosjekter.</strong>
-    <p>Sjekk at <code>data/projects.json</code> finnes og er gyldig JSON.</p>
   </div>
 
-  <script src="script.js"></script>
-
+  <!-- Scripts (order matters: dependencies first) -->
+  <script src="js/theme.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/render.js"></script>
+  <script src="js/app.js"></script>
 </body>
-
 </html>
