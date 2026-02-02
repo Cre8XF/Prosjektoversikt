@@ -216,6 +216,17 @@
   font-weight: 600;
 }
 
+.status-select {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.3rem;
+  border-radius: 10px;
+  border: 1px solid rgba(128,128,128,0.3);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+  font-family: inherit;
+}
+
 .btn {
   display: inline-block;
   padding: 0.3rem 0.6rem;
